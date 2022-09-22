@@ -2,8 +2,9 @@ from rest_framework import status, views
 from rest_framework.response import Response
 from authApp.serializers.pacienteSerializer import pacienteSerializer
 from authApp.models.paciente import paciente
+from urllib import request
 
-class pacientecreate(views.APIView):
+class pacienteCreate(views.APIView):
     def post(self,request,format=None):
         serializer=pacienteSerializer(data=request.data)
         if serializer.is_valid():
