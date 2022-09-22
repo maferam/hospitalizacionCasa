@@ -4,7 +4,7 @@ from authApp.serializers.pacienteSerializer import pacienteSerializer
 from authApp.models.paciente import paciente
 from urllib import request
 
-class pacienteCreate(views.APIView):
+class pacientecreate(views.APIView):
     def post(self,request,format=None):
         serializer=pacienteSerializer(data=request.data)
         if serializer.is_valid():
